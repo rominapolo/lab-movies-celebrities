@@ -1,0 +1,16 @@
+<a href="/movies/{{movie.id}}/edit">Edit This Movie </a>
+<br>
+<br>
+<div>
+    <h3>Title: {{movie.title}}</h3>
+    <p>Genre: {{movie.genre}}</p>
+    <p>Plot: {{movie.plot}}</p>
+    <p>Cast: 
+        {{#each movie.cast}}
+        <li>Name: {{name}}</li>
+        <li>Occupation: {{occupation}}</li>
+        <li>Catch Phrase: {{catchPhrase}}</li>
+        {{/each}}
+
+</div>
+

@@ -14,6 +14,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const PORT = 3000;
 
 // ℹ️ This function is getting exported from the config folder. It runs most middlewares
 require('./config')(app);
@@ -25,8 +26,20 @@ const capitalized = string => string[0].toUpperCase() + string.slice(1).toLowerC
 app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 
 // 👇 Start handling routes here
+// const index = require('./routes/index');
+// app.use('/', index);
+
 const index = require('./routes/index');
 app.use('/', index);
+
+const Celebrities = require('./routes/celebrities.js');
+app.use('/', Celebrities);
+
+const Movies = require('./routes/movies.js');
+app.use('/', Movies);
+
+const User = require('./routes/user.js');
+app.use('/', User);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
