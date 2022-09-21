@@ -5,14 +5,21 @@
 <div>
 
 <br>
-<h3><a href="/movies/{{id}}">{{title}}</a></h3>
+<h4><a href="/movies/{{id}}">{{title}}</a></h4>
 <br>
 
 <a class="edit" href="/movies/{{id}}/edit">Edit</a>
+<br>
+
+ <form action="/movies/{{id}}/like" method="post">
+        <button  class="delete" type="submit">Like❤️</button>
+      </form>
+
+      <br>
 
       <form action="/movies/{{id}}/delete" method="post">
         <button  class="delete" type="submit">Delete</button>
       </form>
-
+<hr>
 </div>
 {{/each}}
