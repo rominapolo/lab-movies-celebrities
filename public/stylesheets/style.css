@@ -1,8 +1,32 @@
+@import '~bootstrap/css/bootstrap';
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: teal;
+  color: pink;
 }
 
 a {
-  color: #00b7ff;
+  color: white;
 }
+
+button {
+  border: none;
+  color: teal;
+  padding: 16px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: pink;
+  color: white;
+}
+
+

@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
 const MovieSchema = new mongoose.Schema ({
+    image: {
+        type: String
+    },
     title: {
         type: String,
     },
