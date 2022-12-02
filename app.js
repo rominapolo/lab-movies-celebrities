@@ -59,11 +59,11 @@ app.use(
   })
 
 
-const Celebrities = require('./routes/celebrities.js');
-app.use('/', Celebrities);
+const Recipes = require('./routes/recipes.js');
+app.use('/', Recipes);
 
-const Movies = require('./routes/movies.js');
-app.use('/', Movies);
+const Comments = require('./routes/comments.js');
+app.use('/', Comments);
 
 const User = require('./routes/authroutes.js');
 app.use('/', User);

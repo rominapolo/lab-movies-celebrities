@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
-const CelebritySchema = new mongoose.Schema ({
+const RecipeSchema = new mongoose.Schema ({
     name: {
         type: String,
     },
@@ -10,8 +10,11 @@ const CelebritySchema = new mongoose.Schema ({
     },
     catchPhrase: {
         type: String,
+    },
+    WinePairing: {
+        type: [{type: Schema.Types.ObjectId, ref: 'Wine'}]
     }
 })
 
-const Celebrity = model('Celebrity', CelebritySchema);
+const Recipe = model('Celebrity', CelebritySchema);
 module.exports = Celebrity;
